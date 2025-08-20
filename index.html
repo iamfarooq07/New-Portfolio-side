@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    * {
+      font-family: "Poppins", sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* .typed-cursor {
+      display: none;
+    } */
+     .typed-cursor {
+  opacity: 0; 
+  display: inline-block; 
+  width: 1ch; 
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="bg-transparent shadow-md p-4 px-6 flex justify-between items-center sticky top-0 z-50">
+    <!-- Logo -->
+    <div>
+      <img src="./images/logo.jpg" alt="Logo" class="h-10 w-auto">
+    </div>
+
+    <!-- Nav Items -->
+    <ul class="hidden md:flex space-x-6 text-black font-medium">
+      <li><a href="#home-us" class="text-[#4c439e] cursor-pointer text-lg hover:border-b-2 border-[#4c439e]">Home</a>
+      </li>
+      <li><a href="#about-us" class="about cursor-pointer text-lg hover:border-b-2 border-[#4c439e]">About</a></li>
+      <li><a href="#project-us" class="cursor-pointer text-lg hover:border-b-2 border-[#4c439e]">Projects</a></li>
+      <li><a href="#contact-us" class="cursor-pointer text-lg hover:border-b-2 border-[#4c439e]">Contact</a></li>
+    </ul>
+
+    <!-- Mobile Menu Icon -->
+    <div class="md:hidden text-2xl text-[#4c439e] cursor-pointer" id="Mobile-icon">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+  </nav>
+  <div class="hidden text-center bg-gray-200 m-3 rounded-2xl sticky top-0 z-50" id="menu">
+    <ul>
+      <li class="py-2 text-lg"><a class="hover:border-b-2 border-black" href="#home-us">Home</a></li>
+      <li class="py-2 text-lg"><a class="hover:border-b-2 border-black" href="#about-us">About</a></li>
+      <li class="py-2 text-lg"><a class="hover:border-b-2 border-black" href="#project-us">Project</a></li>
+      <li class="py-2 text-lg"><a class="hover:border-b-2 border-black" href="#contact-us">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="main grid grid-cols-1 md:grid-cols-2 items-center max-w-7xl mx-auto px-6 py-12" id="home-us">
+    <!-- Left -->
+    <div class="mb-10 md:mb-0">
+
+      <h1 id="hero-text" class="text-4xl md:text-5xl font-bold my-5">Hi, I’m <span id="name"
+          class="text-[#4c439e]">M.Farooq</span>!</h1>
+      <h2 class="text-2xl md:text-4xl font-bold my-5"><span id="typing" class="text-[#4c439e]"></span>
+      </h2>
+      <p class="text-base md:text-lg tracking-wide text-black">
+        Creative and detail-oriented Frontend Developer with a strong passion for
+        building responsive, user-friendly, and visually appealing web interfaces.
+      </p>
+      <button id="hero-btn"
+        class="w-48 bg-[#4c439e] text-lg md:text-xl mt-6 p-3 rounded-2xl text-white hover:bg-[#372f7f] transition">
+        Contact Me
+      </button>
+    </div>
+
+    <!-- Right -->
+    <div class="flex justify-center">
+      <img src="./images/image.avif" class="w-5xs md:max-h-[450px] rounded-xl" alt="Hero">
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section class="max-w-6xl mx-auto py-12 px-6" id="about-us">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-6xl text-[#4c439e] font-extrabold">About Me</h1>
+      <p class="text-base md:text-lg mt-6 text-black max-w-2xl mx-auto">
+        I am a passionate <span class="font-bold text-[#4c439e]">Frontend Developer</span>
+        who loves to build clean, modern, and responsive web applications.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-black mb-6 text-base md:text-lg">
+          Hi, I'm <span class="font-bold text-[#4c439e]">Muhammad Farooq</span>,
+          a frontend enthusiast with skills in
+          <span class="font-medium">HTML, CSS, Tailwind CSS, and JavaScript</span>.
+          I enjoy turning ideas into reality through coding and love creating
+          interactive user experiences.
+        </p>
+        <ul class="space-y-3 text-black text-base">
+          <li>Responsive Web Design</li>
+          <li>Clean & Modern UI</li>
+          <li>JavaScript Interactivity</li>
+          <li>Tailwind CSS Styling</li>
+        </ul>
+      </div>
+      <div class="flex justify-center">
+        <img src="./images/about.avif" alt="Profile"
+          class="rounded-2xl hover:scale-105 transition-transform duration-300 max-h-80 md:max-h-[400px]">
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="max-w-7xl mx-auto py-16 px-6" id="project-us">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-6xl text-[#4c439e] font-extrabold">My Projects</h1>
+      <p class="mt-4 text-bl max-w-2xl mx-auto">
+        Here are some of my recent works. Each project is built with modern web technologies and responsive design.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Project Card -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+        <img src="./images/weather app.png" alt="Project 1" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h2 class="text-xl font-bold text-black">Weather App</h2>
+          <p class="text-black mt-2">A real-time weather app using API integration and clean UI.</p>
+          <a href="http://live-weather-app-02.netlify.app"
+            class="inline-block mt-4 bg-[#4c439e] text-white px-4 py-2 rounded-lg hover:bg-[#372f7f] transition">View
+            Project</a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+        <img src="./images/todo.png" alt="Project 2" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h2 class="text-xl font-bold text-black">Todo App</h2>
+          <p class="text-black mt-2">A simple todo app with add, delete, and complete task features.</p>
+          <a href="https://vermillion-capybara-a28ab4.netlify.app" target="_blank"
+            class="inline-block mt-4 bg-[#4c439e] text-white px-4 py-2 rounded-lg hover:bg-[#372f7f] transition">View
+            Project</a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+        <img src="./images/quiz app.webp" alt="Project 3" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h2 class="text-xl font-bold text-black">Quiz App</h2>
+          <p class="text-black mt-2">An interactive quiz app with score tracking and multiple categories.</p>
+          <a href="http://rad-arithmetic-5b3589.netlify.app" target="_blank"
+            class="inline-block mt-4 bg-[#4c439e] text-white px-4 py-2 rounded-lg hover:bg-[#372f7f] transition">View
+            Project</a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+        <img src="./images/collection page.jpg" alt="Project 4" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h2 class="text-xl font-bold text-black">Collection Page</h2>
+          <p class="text-black mt-2">A responsive personal collection page with animations and modern design.</p>
+          <a href="#" target="_blank"
+            class="inline-block mt-4 bg-[#4c439e] text-white px-4 py-2 rounded-lg hover:bg-[#372f7f] transition">View
+            Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="max-w-6xl mx-auto py-16 px-6" id="contact-us">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-6xl text-[#4c439e] font-extrabold">Contact Me</h1>
+      <p class="mt-4 text-black max-w-2xl mx-auto">
+        Have a project in mind or just want to say hello? Fill out the form below or reach me via email and social
+        links.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- Form -->
+      <form id="form" class="bg-white shadow-lg rounded-2xl p-6 md:p-8 space-y-6">
+        <div>
+          <label class="block text-black font-medium">Name</label>
+          <input id="formName" type="text" placeholder="Your Name"
+            class="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4c439e]">
+        </div>
+        <div>
+          <label class="block text-black font-medium">Email</label>
+          <input type="email" placeholder="Your Email"
+            class="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4c439e]" required>
+        </div>
+        <div>
+          <label class="block text-black font-medium">Message</label>
+          <textarea rows="4" placeholder="Write your message..."
+            class="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4c439e] resize-none"
+            required></textarea>
+        </div>
+        <button
+          class="w-full bg-[#4c439e] text-white py-3 rounded-lg font-semibold hover:bg-[#372f7f] transition duration-300">Send
+          Message</button>
+      </form>
+
+      <!-- Info -->
+      <div class="flex flex-col justify-center space-y-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-black">Get In Touch</h2>
+        <p class="text-black">
+          I’m always open to discuss new projects, creative ideas, or opportunities to be part of your visions.
+        </p>
+        <div class="space-y-2 text-black">
+          <p>📍 Nazimabad, Karachi, Pakistan</p>
+          <p>📧 <a href="mailto:mfarooq556678899@gmail.com"
+              class="text-[#4c439e] font-medium hover:underline">mfarooq556678899@gmail.com</a></p>
+          <p>📞 0311-3836683</p>
+        </div>
+        <div class="flex space-x-4 mt-4">
+          <a href="https://github.com/iamfarooq07" class="text-[#4c439e] hover:text-[#372f7f] text-2xl"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/muhammad-farooq-123f/"
+            class="text-[#4c439e] hover:text-[#372f7f] text-2xl"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#4c439e] text-white py-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
+      <p class="text-sm md:text-base">&copy; 2025 Muhammad Farooq. All Rights Reserved.</p>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-gray-300">Home</a>
+        <a href="#" class="hover:text-gray-300">About</a>
+        <a href="#" class="hover:text-gray-300">Projects</a>
+        <a href="#" class="hover:text-gray-300">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  </body>
+
+</html>
