@@ -2,7 +2,8 @@ const mobIcon = document.querySelector(".fa-bars");
 const menuBar = document.getElementById("menu");
 const forms = document.getElementById("form");
 const formsName = document.getElementById("formName");
-console.log(forms);
+const navbar = document.getElementById('navbar');
+console.log(navbar);
 
 
 // Menu Bar open and close
@@ -34,6 +35,12 @@ forms.addEventListener('submit', (e) => {
     }
     else {
         alert(`WellCome to My Portfoilo WebSite "${input}"`)
-        forms.reset().
+        forms.reset()
     }
+})
+
+// ============================
+
+navbar.addEventListener('scroll', () => {
+    navbar.style.backgroundColor = "#4c439e"
 })
